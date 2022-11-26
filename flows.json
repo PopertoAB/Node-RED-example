@@ -124,101 +124,48 @@
         "className": ""
     },
     {
-        "id": "0691b4400dc5100c",
-        "type": "ui_text_input",
+        "id": "caba969ca3b0a864",
+        "type": "inject",
         "z": "539b5ede02c4136d",
         "name": "",
-        "label": "",
-        "tooltip": "",
-        "group": "53ff1b917b0b3513",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 300,
-        "y": 220,
-        "wires": [
-            [
-                "4aa9ddb3e3a1b77c"
-            ]
-        ]
-    },
-    {
-        "id": "634ecb3805054ff0",
-        "type": "ui_button",
-        "z": "539b5ede02c4136d",
-        "name": "",
-        "group": "53ff1b917b0b3513",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Convert",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "convert",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 140,
-        "y": 220,
-        "wires": [
-            [
-                "0691b4400dc5100c"
-            ]
-        ]
-    },
-    {
-        "id": "2de09866f720bb5a",
-        "type": "ui_text",
-        "z": "539b5ede02c4136d",
-        "group": "53ff1b917b0b3513",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 650,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "4aa9ddb3e3a1b77c",
-        "type": "change",
-        "z": "539b5ede02c4136d",
-        "name": "",
-        "rules": [
+        "props": [
             {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "convertido",
-                "tot": "str"
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 480,
-        "y": 220,
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 100,
         "wires": [
             [
-                "2de09866f720bb5a"
+                "0fe4bc528c70d23b"
             ]
         ]
+    },
+    {
+        "id": "0fe4bc528c70d23b",
+        "type": "debug",
+        "z": "539b5ede02c4136d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 100,
+        "wires": []
     }
 ]
